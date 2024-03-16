@@ -12,8 +12,10 @@ import {
 const Footer = () => {
   return (
     <StyledFooter>
-      <StyledFooterContainer>
-        {/* <Logo /> */}
+      <p>© Yacht ape 2024 all rights reserved</p>
+
+      {/* <StyledFooterContainer>
+        <Logo />
 
         <StyledFooterLink
           href="https://github.com/bajmutov/Rent-Car/"
@@ -26,7 +28,7 @@ const Footer = () => {
         <StyledFooterList>
           <li>
             <a href="https://twitter.com/" target="_blank" rel="noreferrer">
-              {/* <Twitter /> */}
+              <Twitter />
             </a>
           </li>
           <li>
@@ -35,11 +37,11 @@ const Footer = () => {
               target="_blank"
               rel="noreferrer"
             >
-              {/* <Icon name={'telegram'} size={48} /> */}
+              <Icon name={'telegram'} size={48} />
             </a>
           </li>
         </StyledFooterList>
-      </StyledFooterContainer>
+      </StyledFooterContainer> */}
     </StyledFooter>
   );
 };
