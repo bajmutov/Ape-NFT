@@ -1,16 +1,21 @@
-export const App = () => {
+import { lazy } from 'react';
+
+import Container from './Container';
+import Header from './Header';
+import Footer from './Footer';
+import Main from './Main/Main';
+
+// const HomePage = lazy(() => import('pages/HomePage'));
+// const CatalogPage = lazy(() => import("pages/CatalogPage"));
+
+function App() {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <Container>
+      <Header />
+      <Main />
+      <Footer />
+    </Container>
   );
-};
+}
+
+export default App;
