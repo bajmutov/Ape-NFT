@@ -6,14 +6,14 @@ import {
   // Twitter,
 } from './Footer.styled';
 
-import Icon from 'components/UI/Icon';
-import Logo from 'components/UI/Logo';
+// import Icon from 'components/UI/Icon';
+// import Logo from 'components/UI/Logo';
 
 const Footer = () => {
   return (
     <StyledFooter>
       <StyledFooterContainer>
-        <Logo />
+        {/* <Logo /> */}
 
         <StyledFooterLink
           href="https://github.com/bajmutov/Rent-Car/"
@@ -35,7 +35,7 @@ const Footer = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <Icon name={'telegram'} size={48} />
+              {/* <Icon name={'telegram'} size={48} /> */}
             </a>
           </li>
         </StyledFooterList>
