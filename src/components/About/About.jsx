@@ -1,7 +1,7 @@
 import { AboutSection } from './About.styled';
 
 const About = () => {
-  return <AboutSection></AboutSection>;
+  return <AboutSection>About</AboutSection>;
 };
 
 export default About;

@@ -1,7 +1,7 @@
 import { ArtsSection } from './Arts.styled';
 
 const Arts = () => {
-  return <ArtsSection></ArtsSection>;
+  return <ArtsSection>Arts</ArtsSection>;
 };
 
 export default Arts;

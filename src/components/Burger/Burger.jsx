@@ -1,7 +1,7 @@
 import { BurgerDiv } from './Burger.styled';
 
 const Burger = () => {
-  return <BurgerDiv></BurgerDiv>;
+  return <BurgerDiv>BurgerMenu</BurgerDiv>;
 };
 
 export default Burger;

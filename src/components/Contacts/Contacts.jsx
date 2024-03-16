@@ -1,7 +1,7 @@
 import { ContactsSection } from './Contacts.styled';
 
 const Contacts = () => {
-  return <ContactsSection></ContactsSection>;
+  return <ContactsSection>Contacts</ContactsSection>;
 };
 
 export default Contacts;

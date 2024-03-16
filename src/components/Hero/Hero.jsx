@@ -1,7 +1,7 @@
 import { HeroSection } from './Hero.styled';
 
 const Hero = () => {
-  return <HeroSection></HeroSection>;
+  return <HeroSection>Hero</HeroSection>;
 };
 
 export default Hero;
