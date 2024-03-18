@@ -1,6 +1,8 @@
 import { Field, Form, ErrorMessage } from 'formik';
 // import { StyledButton } from 'components/Button/Button.styled';
 import styled from 'styled-components';
+import { ReactComponent as IconDiscord } from '../../img/discord.svg';
+import { ReactComponent as IconMetamask } from '../../img/MetaMask.svg';
 
 export const Container = styled.div`
   width: 100%;
@@ -72,22 +74,22 @@ export const ContainerInput = styled.div`
 `;
 
 export const Input = styled(Field)`
-  font-size: 18px;
+  font-size: 16px;
   line-height: calc(24 / 18);
   width: 100%;
-  height: 46px;
+  height: 48px;
   /* opacity: 0.3; */
-  padding: 0 0 0 14px;
+  padding: 0 0 0 72px;
   margin-bottom: 18px;
   background-color: transparent;
-
-  border-radius: 12px;
-  outline: none;
+  border: 1px solid var(--dark-text-color);
+  border-radius: 8px;
+  /* outline: none; */
   transition: var(--transition);
   &::placeholder {
     color: var(--light-text-color);
-    font-size: 16px;
-    line-height: calc(18 / 16);
+    font-size: 12px;
+    line-height: calc(12 / 12);
     letter-spacing: 0.02em;
   }
   &:hover,
@@ -103,7 +105,7 @@ export const Input = styled(Field)`
   }
 
   @media screen and (min-width: 768px) {
-    height: 52px;
+    height: 48px;
     margin-bottom: 20px;
   }
 `;
@@ -148,3 +150,57 @@ export const Error = styled(ErrorMessage)`
 //   fill: ${({ theme }) => theme.palette.text.primary};
 //   transition: var(--transition);
 // `;
+
+export const SubmitButton = styled.button`
+  font-family: var(--heading-font-family);
+  font-size: 16px;
+  border-radius: 12px;
+  color: var(--light-text-color);
+  background-color: var(--accent-color);
+  padding: 12px 91.5px;
+  display: block;
+  border: none;
+  transition: var(--transition);
+  line-height: calc(19 / 16);
+
+  &:hover,
+  &:focus {
+    color: var(--dark-text-col);
+  }
+`;
+
+// export const SvgButton = styled.button`
+//   border-radius: 12px;
+//   color: var(--light-text-color);
+//   background-color: var(--accent-color);
+//   padding: 12px 91.5px;
+//   display: block;
+//   border: none;
+//   transition: var(--transition);
+//   line-height: calc(19 / 16);
+
+//   &:hover,
+//   &:focus {
+//     color: var(--dark-text-col);
+//   }
+// `;
+
+export const Discord = styled(IconDiscord)`
+  width: 48px;
+  height: 48px;
+  fill: #5a65f2;
+  background-color: var(--dark-text-color);
+  border: 1px solid var(--dark-text-color);
+  border-radius: 8px 0 0 8px;
+  position: absolute;
+`;
+
+export const Metamask = styled(IconMetamask)`
+  width: 48px;
+  height: 48px;
+  fill: #5a65f2;
+  background-color: var(--dark-text-color);
+  border: 1px solid var(--dark-text-color);
+  border-radius: 8px 0 0 8px;
+  position: absolute;
+`;

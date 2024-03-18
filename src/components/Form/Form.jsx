@@ -1,6 +1,16 @@
 import { Formik } from 'formik';
 import * as yup from 'yup';
-import { ContainerInput, Error, Forma, Input } from './Form.styled';
+import {
+  ContainerInput,
+  Discord,
+  Error,
+  Forma,
+  Input,
+  Metamask,
+  StyledLogoIcon,
+  SubmitButton,
+} from './Form.styled';
+import discord from '../../img/discord.svg';
 
 const schema = yup.object().shape({
   discord: yup
@@ -24,29 +34,30 @@ const Form = () => {
       <Formik initialValues={initialValues} validationSchema={schema}>
         <Forma autoComplete="off">
           <ContainerInput>
-            <button>svg</button>
+            <Discord />
             <Input
               type="text"
               name="discord"
               minLength="3"
-              placeholder="@Jcksprrw"
+              placeholder="@USERNAME"
               pattern="@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
               required
             />
             <Error name="discord" component="div" />
-
-            <button>svg</button>
+          </ContainerInput>
+          <ContainerInput>
+            <Metamask />
             <Input
               type="text"
               name="metamask"
               minLength="10"
-              placeholder="1x28601vsdfg31543cs"
+              placeholder="WALLET ADRESS"
               pattern="^[^\s]+(\s.*)?$"
               required
             />
             <Error name="metamask" component="div" />
           </ContainerInput>
-          <button type="submit">MINT</button>
+          <SubmitButton>MINT</SubmitButton>
         </Forma>
       </Formik>
     </>

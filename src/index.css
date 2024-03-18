@@ -31,6 +31,7 @@
   --cool-font-family: 'BiroScriptPlus-Bold', sans-serif;
 
   --main-bg-color: #4a4a4a;
+  --placeholder-color: rgba(255, 255, 255, 0.24);
 
   --light-text-color: #fff;
   --dark-text-color: #1e1e1e;
@@ -45,6 +46,7 @@
 }
 
 body {
+  background-color: var(--main-bg-color);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, var(--text-font-family);
 }
