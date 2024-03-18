@@ -25,10 +25,26 @@
   font-style: normal;
 }
 
+:root {
+  --text-font-family: 'MessinaSansMono-Regular', sans-serif;
+  --heading-font-family: 'Right Grotesk', sans-serif;
+  --cool-font-family: 'BiroScriptPlus-Bold', sans-serif;
+
+  --main-bg-color: #4a4a4a;
+
+  --light-text-color: #fff;
+  --dark-text-color: #1e1e1e;
+
+  --accent-color: #dc3b5a;
+  --hover-color: #dc3b5a;
+
+  --box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'MessinaSansMono-Regular',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system, BlinkMacSystemFont, var(--text-font-family);
 }
