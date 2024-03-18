@@ -7,10 +7,8 @@ import {
   Forma,
   Input,
   Metamask,
-  StyledLogoIcon,
   SubmitButton,
 } from './Form.styled';
-import discord from '../../img/discord.svg';
 
 const schema = yup.object().shape({
   discord: yup
