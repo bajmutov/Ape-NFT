@@ -1,15 +1,34 @@
 @import-normalize; /* bring in normalize.css styles */
 
+@font-face {
+  font-family: 'BiroScriptPlus-Bold';
+  src: url('../font/BiroScript/BiroScriptPlus-Bold.woff2') format('woff2'),
+    url('../font/BiroScript/BiroScriptPlus-Bold.woff') format('woff'),
+    url('../font/BiroScript/BiroScriptPlus-Bold.ttf') format('truetype'),
+    url('../font/BiroScript/BiroScriptPlus-Bold.eot') format('eot');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Right Grotesk';
+  src: url('../font/Right Grotesk/RightGrotesk-CompactBlack.otf')
+    format('opentype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MessinaSansMono-Regular';
+  src: url('../font/MessinaSans/MessinaSansMono-Regular.woff2') format('woff2'),
+    url('../font/MessinaSans/MessinaSansMono-Regular.woff') format('woff'),
+    url('../font/MessinaSans/MessinaSansMono-Regular.eot') format('eot'),
+    url('../font/MessinaSans/MessinaSansMono-Regular.ttf') format('truetype');
+  font-style: normal;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, 'MessinaSansMono-Regular',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
