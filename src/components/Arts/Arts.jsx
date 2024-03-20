@@ -2,7 +2,7 @@ import { ArtsSection } from './Arts.styled';
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import slides from '../slides.json';
-import SlideButton from 'components/SlideButton';
+import SlideButton from './SlideButton';
 
 const Arts = () => {
   const windowWidth = window.innerWidth;
