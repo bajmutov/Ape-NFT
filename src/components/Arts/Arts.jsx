@@ -1,4 +1,4 @@
-import { ArtsSection } from './Arts.styled';
+import { Section } from './Arts.styled';
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import slides from '../slides.json';
@@ -15,7 +15,7 @@ const Arts = () => {
   };
 
   return (
-    <ArtsSection>
+    <Section>
       <Heading>Colection</Heading>
       <Swiper spaceBetween={24} slidesPerView={slidesNumber()}>
         {slides.map(slide => (
@@ -24,8 +24,9 @@ const Arts = () => {
           </SwiperSlide>
         ))}
         <SlideButton />
+        ``
       </Swiper>
-    </ArtsSection>
+    </Section>
   );
 };
 

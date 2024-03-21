@@ -1,54 +1,56 @@
-import { MindMapSection } from './MindMap.styled';
 import 'swiper/css';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper } from 'swiper/react';
 import Card from './Card/Card';
 import SlideButton from 'components/Arts/SlideButton';
 import { ReactComponent as IconArrow } from '../../img/up-left-arrow.svg';
+import { Heading } from 'components/Contacts/Contacts.styled';
+import { Section } from 'components/Arts/Arts.styled';
+import { StyledSwiper, StyledSwiperSlide } from './MindMap.styled';
 
 const MindMap = () => {
   const windowWidth = window.innerWidth;
   const slidesNumber = () => {
-    if (windowWidth >= 480) return 4;
+    if (windowWidth >= 768) return 4;
     else return 1;
   };
 
   return (
-    <MindMapSection>
-      <h1>Mind Map</h1>
+    <Section>
+      <Heading>Mind Map</Heading>
       <Swiper spaceBetween={24} slidesPerView={slidesNumber()}>
-        <SwiperSlide>
+        <StyledSwiperSlide>
           <Card
             text={
               'All owners of APE NFTs and all future collections will receive a percentage of sales based on the number of NFTs they own'
             }
             heading={'YAPE DROP'}
           />
-        </SwiperSlide>
-        <SwiperSlide>
+        </StyledSwiperSlide>
+        <StyledSwiperSlide>
           <Card
             text={
               'Launch of the 2nd YACHT Collection Releasing the first version of the Ape Slam Game'
             }
             heading={'New Collection'}
           />
-        </SwiperSlide>
-        <SwiperSlide>
+        </StyledSwiperSlide>
+        <StyledSwiperSlide>
           <Card
             text={
               'Launch your own token, the proceeds of which will go to a global fund to LAUNCH YACHT CLUB AND PROMOTE it'
             }
             heading={'TOKEN'}
           />
-        </SwiperSlide>
-        <SwiperSlide style={{ backgroundColor: 'var(--accent-color)' }}>
-          <a href="https://github.com/bajmutov">
+        </StyledSwiperSlide>
+        <StyledSwiperSlide>
+          <StyledSwiper href="https://github.com/bajmutov">
             <Card text={<IconArrow />} heading={'Learn more in mind map'} />
-          </a>
-        </SwiperSlide>
+          </StyledSwiper>
+        </StyledSwiperSlide>
 
         <SlideButton />
       </Swiper>
-    </MindMapSection>
+    </Section>
   );
 };
 

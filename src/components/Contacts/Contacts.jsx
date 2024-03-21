@@ -1,16 +1,10 @@
 import Form from 'components/Form';
-import {
-  ContactsSection,
-  Wrapper,
-  SvgButton,
-  Heading,
-  Text,
-} from './Contacts.styled';
+import { Section, Wrapper, SvgButton, Heading, Text } from './Contacts.styled';
 import { ReactComponent as Cross } from '../../img/cross.svg';
 
 const Contacts = () => {
   return (
-    <ContactsSection>
+    <Section>
       <Heading>ARE YOU IN?</Heading>
       <Wrapper>
         <SvgButton>
@@ -22,7 +16,7 @@ const Contacts = () => {
         </Text>
         <Form />
       </Wrapper>
-    </ContactsSection>
+    </Section>
   );
 };
 

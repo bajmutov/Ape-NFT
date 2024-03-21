@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ArtsSection = styled.section`
+export const Section = styled.section`
   padding-bottom: 60px;
 
   @media screen and (min-width: 768px) {

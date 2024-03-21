@@ -1,9 +1,11 @@
+import { CardText, CardWrapper, Headline } from '../MindMap.styled';
+
 const Card = ({ text, heading }) => {
   return (
-    <div>
-      <p>{text}</p>
-      <h3>{heading}</h3>
-    </div>
+    <CardWrapper>
+      <CardText>{text}</CardText>
+      <Headline>{heading}</Headline>
+    </CardWrapper>
   );
 };
 
