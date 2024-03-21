@@ -2,13 +2,14 @@ import { Formik } from 'formik';
 import * as yup from 'yup';
 import {
   ContainerInput,
-  Discord,
   Error,
   Forma,
+  IconButton,
   Input,
-  Metamask,
   SubmitButton,
 } from './Form.styled';
+import { ReactComponent as Discord } from '../../img/discord.svg';
+import { ReactComponent as Metamask } from '../../img/MetaMask.svg';
 
 const schema = yup.object().shape({
   discord: yup
@@ -32,7 +33,9 @@ const Form = () => {
       <Formik initialValues={initialValues} validationSchema={schema}>
         <Forma autoComplete="off">
           <ContainerInput>
-            <Discord />
+            <IconButton>
+              <Discord fill={'#5a65f2'} width={24} height={24} />
+            </IconButton>
             <Input
               type="text"
               name="discord"
@@ -41,10 +44,12 @@ const Form = () => {
               pattern="@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
               required
             />
-            <Error name="discord" component="div" />
           </ContainerInput>
+          <Error name="discord" component="div" />
           <ContainerInput>
-            <Metamask />
+            <IconButton>
+              <Metamask width={24} height={24} />
+            </IconButton>
             <Input
               type="text"
               name="metamask"
@@ -53,9 +58,9 @@ const Form = () => {
               pattern="^[^\s]+(\s.*)?$"
               required
             />
-            <Error name="metamask" component="div" />
           </ContainerInput>
-          <SubmitButton>MINT</SubmitButton>
+          <Error name="metamask" component="div" />
+          <SubmitButton>mint</SubmitButton>
         </Forma>
       </Formik>
     </>

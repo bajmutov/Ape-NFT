@@ -30,7 +30,8 @@
   --heading-font-family: 'Right Grotesk', sans-serif;
   --cool-font-family: 'BiroScriptPlus-Bold', sans-serif;
 
-  --main-bg-color: #4a4a4a;
+  --main-bg-color: #181818;
+  /* --main-bg-color: #4a4a4a; */
   --placeholder-color: rgba(255, 255, 255, 0.24);
 
   --light-text-color: #fff;

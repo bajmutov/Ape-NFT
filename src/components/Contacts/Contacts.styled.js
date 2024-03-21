@@ -6,7 +6,6 @@ export const ContactsSection = styled.section`
   @media screen and (min-width: 768px) {
     padding-bottom: 80px;
   }
-  }
 `;
 
 export const Wrapper = styled.div`
