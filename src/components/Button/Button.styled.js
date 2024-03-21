@@ -17,6 +17,6 @@ export const StyledButton = styled.button`
   &:hover,
   &:focus {
     background-color: var(--hover-color);
-    fill: var(--hover-color);
+    color: var(--dark-text-color);
   }
 `;

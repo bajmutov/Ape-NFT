@@ -10,11 +10,15 @@ import Main from './Main/Main';
 
 function App() {
   return (
-    <Container>
+    <>
       <Header />
-      <Main />
+      <main>
+        <Container>
+          <Main />
+        </Container>
+      </main>
       <Footer />
-    </Container>
+    </>
   );
 }
 

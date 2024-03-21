@@ -1,47 +1,12 @@
-import {
-  StyledFooter,
-  StyledFooterContainer,
-  StyledFooterList,
-  StyledFooterLink,
-  // Twitter,
-} from './Footer.styled';
-
-// import Icon from 'components/UI/Icon';
-// import Logo from 'components/UI/Logo';
+import Container from 'components/Container';
+import { StyledFooter, Text } from './Footer.styled';
 
 const Footer = () => {
   return (
     <StyledFooter>
-      <p>© Yacht ape 2024 all rights reserved</p>
-
-      {/* <StyledFooterContainer>
-        <Logo />
-
-        <StyledFooterLink
-          href="https://github.com/bajmutov/Rent-Car/"
-          target="_blank"
-          referrerPolicy="no-referrer"
-        >
-          Privacy Policy
-        </StyledFooterLink>
-
-        <StyledFooterList>
-          <li>
-            <a href="https://twitter.com/" target="_blank" rel="noreferrer">
-              <Twitter />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://web.telegram.org/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Icon name={'telegram'} size={48} />
-            </a>
-          </li>
-        </StyledFooterList>
-      </StyledFooterContainer> */}
+      <Container>
+        <Text>© Yacht ape 2024 all rights reserved</Text>
+      </Container>
     </StyledFooter>
   );
 };

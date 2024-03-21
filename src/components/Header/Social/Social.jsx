@@ -1,5 +1,4 @@
 import { Discord, Ship, Twitter } from './Social.styled';
-import sprite from '../../../img/sprite.svg';
 
 const Social = () => {
   return (

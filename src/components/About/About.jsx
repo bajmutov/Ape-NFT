@@ -1,5 +1,5 @@
 import { AboutSection } from './About.styled';
-import ape from '../../img/AboutApe-mobile.png';
+import ape from 'img/AboutApe-mobile.png';
 import { ReactComponent as Cross } from '../../img/cross.svg';
 import Banner from './Banner/Banner';
 

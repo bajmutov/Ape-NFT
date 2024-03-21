@@ -1,8 +1,19 @@
 import styled from 'styled-components';
 
 export const StyledContainer = styled.div`
-  /* width: 100%;  media<378 px*/
-  width: 1240px;
+  width: 100%;
+  padding: 0 72px;
   margin: 0 auto;
-  padding: 0 20px;
+
+  @media screen and (min-width: 480px) {
+    width: 216px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 592px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 1032px;
+  }
 `;

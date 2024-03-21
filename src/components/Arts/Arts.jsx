@@ -9,7 +9,7 @@ const Arts = () => {
 
   const slidesNumber = () => {
     if (windowWidth >= 1280) return 4;
-    else if (windowWidth > 480 && windowWidth < 1280) return 2;
+    else if (windowWidth > 768 && windowWidth < 1280) return 2;
     else return 1;
   };
 

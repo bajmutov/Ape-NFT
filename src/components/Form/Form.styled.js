@@ -1,53 +1,7 @@
 import { Field, Form, ErrorMessage } from 'formik';
-// import { StyledButton } from 'components/Button/Button.styled';
 import styled from 'styled-components';
 import { ReactComponent as IconDiscord } from '../../img/discord.svg';
 import { ReactComponent as IconMetamask } from '../../img/MetaMask.svg';
-
-export const Container = styled.div`
-  width: 100%;
-  height: 100%;
-  padding: 90px 0px 35px 0px;
-
-  @media screen and (min-width: 768px) {
-    width: 496px;
-    padding: 150px 0px 100px 0px;
-  }
-`;
-
-export const TitleWrapper = styled.div`
-  margin-bottom: 14px;
-
-  @media screen and (min-width: 768px) {
-    margin-bottom: 16px;
-  }
-`;
-
-export const Info = styled.p`
-  font-weight: 400;
-  font-size: 14px;
-  margin: 0;
-  margin-bottom: 28px;
-  line-height: calc(18 / 14);
-  letter-spacing: -0.02em;
-  opacity: 0.3;
-
-  @media screen and (min-width: 768px) {
-    font-size: 16px;
-    line-height: calc(24 / 16);
-    margin-bottom: 32px;
-  }
-`;
-
-export const InfoLink = styled.p`
-  font-weight: 400;
-  font-size: 12px;
-  margin: 0;
-  margin-top: 12px;
-  line-height: calc(18 / 12);
-  letter-spacing: 0.02em;
-  opacity: 0.6;
-`;
 
 export const Forma = styled(Form)`
   max-width: 335px;

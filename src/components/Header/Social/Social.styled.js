@@ -17,7 +17,7 @@ export const Discord = styled(DiscordIcon)`
 
   &:hover,
   &:focus {
-    fill: var(--light-text-color);
+    fill: var(--hover-color);
   }
 `;
 
@@ -29,7 +29,7 @@ export const Ship = styled(ShipIcon)`
 
   &:hover,
   &:focus {
-    fill: var(--light-text-color);
+    fill: var(--hover-color);
   }
 `;
 export const Twitter = styled(TwitterIcon)`
@@ -40,6 +40,6 @@ export const Twitter = styled(TwitterIcon)`
 
   &:hover,
   &:focus {
-    fill: var(--light-text-color);
+    fill: var(--hover-color);
   }
 `;
