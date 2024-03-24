@@ -5,7 +5,7 @@ import Button from 'components/Button';
 import Burger from './Burger';
 import { StyledHeader, StyledHeaderContainer } from './Header.styled';
 import Logo from './Logo';
-import Navigation from './Navigation';
+// import Navigation from './Navigation';
 import Social from './Social';
 
 const Header = () => {
@@ -14,7 +14,7 @@ const Header = () => {
       <StyledHeaderContainer>
         <Burger />
         <Logo />
-        <Navigation />
+        {/* <Navigation /> */}
         <Button pady={17} padx={3.5}>
           CLOSE
         </Button>

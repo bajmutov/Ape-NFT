@@ -4,22 +4,22 @@ const Social = () => {
   return (
     <ul>
       <li>
-        <a href="#" uk-scroll="true">
+        <a href="https://discord.com/" uk-scroll="true">
           <Discord />
         </a>
       </li>
       <li>
-        <a href="#" uk-scroll="true">
+        <a href="https://www.binance.com/" uk-scroll="true">
           <Ship />
         </a>
       </li>
       <li>
-        <a href="#" uk-scroll="true">
+        <a href="https://twitter.com/" uk-scroll="true">
           <Twitter />
         </a>
       </li>
       <li>
-        <a href="#" uk-scroll="true">
+        <a href="/" uk-scroll="true">
           <svg>
             <use href="/public/svg/logo-hover.svg"></use>
           </svg>
