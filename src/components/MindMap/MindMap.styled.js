@@ -3,14 +3,19 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 export const CardWrapper = styled.div`
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 216px;
   height: 242px;
   /* background-color: var(--dark-text-color); */
   background-color: inherit;
   padding: 24px 12px;
-  border-radius: 16px;
+  border-radius: 12px;
 
   @media screen and (min-width: 768px) {
+    padding: 24px;
+    border-radius: 16px;
     width: 284px;
     height: 242px;
   }
@@ -21,15 +26,40 @@ export const CardWrapper = styled.div`
   }
 `;
 
+//Slider
+export const MindMapSliderDiv = styled.div`
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+`;
+
 export const StyledSwiperSlide = styled(SwiperSlide)`
   background-color: var(--dark-text-color);
   border-radius: 16px;
+
+  /* padding: 24px 12px; */
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* background-color: var(--secondary-background-color); */
+  color: var(--main-font-color);
+  height: 242px;
+
+  @media screen and (min-width: 768px) {
+    /* padding: 24px; */
+    border-radius: 16px;
+  }
+  @media screen and (min-width: 1280px) {
+    height: 480px;
+  }
 `;
 
 export const Headline = styled.h3`
   font-family: var(--heading-font-family);
   text-align: left;
   text-transform: uppercase;
+  font-weight: 900;
   font-size: 32px;
   line-height: calc(32 / 32);
   /* margin-top: 24px; */
@@ -46,8 +76,51 @@ export const CardText = styled.p`
   text-transform: uppercase;
   font-size: 12px;
   line-height: calc(14 / 12);
+  margin-left: auto;
+  width: 192px;
+
+  @media screen and (min-width: 768px) {
+    width: 128px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 228px;
+    font-size: 24px;
+    line-height: 1.2;
+  }
 `;
 
 export const StyledSwiper = styled.a`
   background-color: var(--accent-color);
+  border-radius: 16px;
+
+  svg {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    margin-left: auto;
+    width: 48px;
+    height: 48px;
+    transition: var(--transition);
+  }
+
+  &:hover svg,
+  &:focus svg {
+    top: 0;
+    right: 0;
+  }
+`;
+
+//Grid
+export const GridContainer = styled.div`
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(2, 284px);
+  }
+
+  @media screen and (min-width: 1280px) {
+    grid-template-columns: repeat(2, 504px);
+  }
 `;
