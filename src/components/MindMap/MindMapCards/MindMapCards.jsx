@@ -4,7 +4,7 @@ import {
   StyledSwiper,
   StyledSwiperSlide,
 } from '../MindMap.styled';
-import mindmap from '../../data/mindmap.json';
+import mindmap from '../../../data/mindmap.json';
 import Card from '../Card/Card';
 
 const MindMapCards = () => {

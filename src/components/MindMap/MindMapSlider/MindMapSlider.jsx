@@ -3,7 +3,7 @@ import { Swiper } from 'swiper/react';
 import SlideButton from 'components/Arts/SlideButton';
 import { ReactComponent as IconArrow } from '../../../img/up-left-arrow.svg';
 import { StyledSwiper, StyledSwiperSlide } from '../MindMap.styled';
-import mindmap from '../../data/mindmap.json';
+import mindmap from '../../../data/mindmap.json';
 import { MindMapSliderDiv } from '../MindMap.styled';
 import Card from '../Card/Card';
 

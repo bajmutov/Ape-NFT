@@ -51,6 +51,8 @@ export const Input = styled(Field)`
   @media screen and (min-width: 1280px) {
     margin-bottom: 24px;
     height: 62px;
+    font-size: 16px;
+    line-height: calc(19 / 16);
   }
 `;
 

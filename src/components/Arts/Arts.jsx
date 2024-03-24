@@ -1,7 +1,7 @@
 import { Section } from './Arts.styled';
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import slides from '../data/slides.json';
+import slides from '../../data/slides.json';
 import SlideButton from './SlideButton';
 import { Heading } from 'components/Contacts/Contacts.styled';
 
