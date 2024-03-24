@@ -1,12 +1,12 @@
-// import { lazy } from 'react';
-
 import Container from './Container';
 import Header from './Header';
 import Footer from './Footer';
-import Main from './Main/Main';
-
-// const HomePage = lazy(() => import('pages/HomePage'));
-// const CatalogPage = lazy(() => import("pages/CatalogPage"));
+import About from 'components/About';
+import Arts from 'components/Arts';
+import Contacts from 'components/Contacts';
+import FAQ from 'components/FAQ';
+import Hero from 'components/Hero';
+import MindMap from 'components/MindMap';
 
 function App() {
   return (
@@ -14,7 +14,12 @@ function App() {
       <Header />
       <main>
         <Container>
-          <Main />
+          <Hero />
+          <About />
+          <MindMap />
+          <FAQ />
+          <Arts />
+          <Contacts />
         </Container>
       </main>
       <Footer />

@@ -10,13 +10,6 @@ export const Section = styled.section`
   @media screen and (min-width: 1280px) {
     padding-bottom: 120px;
   }
-
-  & img {
-    &:hover,
-    &:focus {
-      transform: scale(1.007);
-    }
-  }
 `;
 
 export const SlideWrapper = styled.div`

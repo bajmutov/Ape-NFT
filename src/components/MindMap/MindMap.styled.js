@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { SwiperSlide } from 'swiper/react';
 
 export const CardWrapper = styled.div`
   box-sizing: border-box;
@@ -8,7 +8,6 @@ export const CardWrapper = styled.div`
   justify-content: space-between;
   width: 216px;
   height: 242px;
-  /* background-color: var(--dark-text-color); */
   background-color: inherit;
   padding: 24px 12px;
   border-radius: 12px;
@@ -36,18 +35,14 @@ export const MindMapSliderDiv = styled.div`
 export const StyledSwiperSlide = styled(SwiperSlide)`
   background-color: var(--dark-text-color);
   border-radius: 16px;
-
-  /* padding: 24px 12px; */
   border-radius: 12px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* background-color: var(--secondary-background-color); */
   color: var(--main-font-color);
   height: 242px;
 
   @media screen and (min-width: 768px) {
-    /* padding: 24px; */
     border-radius: 16px;
   }
   @media screen and (min-width: 1280px) {
@@ -62,12 +57,10 @@ export const Headline = styled.h3`
   font-weight: 900;
   font-size: 32px;
   line-height: calc(32 / 32);
-  /* margin-top: 24px; */
 
   @media screen and (min-width: 1280px) {
     font-size: 64px;
     line-height: calc(64 / 64);
-    /* margin-top: 80px; */
   }
 `;
 
@@ -108,6 +101,14 @@ export const StyledSwiper = styled.a`
     top: 0;
     right: 0;
   }
+
+  @media screen and (min-width: 1280px) {
+    svg {
+      margin-left: auto;
+      width: 64px;
+      height: 64px;
+    }
+  }
 `;
 
 //Grid
@@ -116,8 +117,8 @@ export const GridContainer = styled.div`
 
   @media screen and (min-width: 768px) {
     display: grid;
-    gap: 24px;
     grid-template-columns: repeat(2, 284px);
+    gap: 24px;
   }
 
   @media screen and (min-width: 1280px) {

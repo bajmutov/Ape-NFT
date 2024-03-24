@@ -1,48 +1,57 @@
-import { FAQSection } from './FAQ.styled';
+import { Section } from 'components/Arts/Arts.styled';
+import { faqInfo } from '../../constants/faq';
+import { Heading } from 'components/Contacts/Contacts.styled';
+import { useState } from 'react';
+import {
+  FaqAnsver,
+  FaqButton,
+  FaqImg,
+  FaqList,
+  FaqListItem,
+  FaqQuestion,
+  FaqQuestionWrapper,
+} from './FAQ.styled';
 
 const FAQ = () => {
+  const [openIndex, setOpenIndex] = useState(0);
+
+  const handleToggle = index => {
+    setOpenIndex(prevIndex => (prevIndex === index ? -1 : index));
+  };
+
   return (
-    <FAQSection>
-      <h2>FAQ</h2>
-      <ul>
-        <li>
-          <img src={require(`../../img/FAQ-ape1.png`)} alt="Hero Ape" />
-          <span>[1]</span>
-          <h2>WHAT IS AN NFT COLLECTION?</h2>
-          <p>
-            To purchase nfts from a collection, you typically need to use
-            cryptocurrency on a blockchain0based marketplace.
-          </p>
-        </li>
-        <li>
-          <img src={require(`../../img/FAQ-ape2.png`)} alt="Hero Ape" />
-          <span>[2]</span>
-          <h2>HOW DO I PURCHASE NFTS FROM A COLLECTION?</h2>
-          <p>
-            To purchase nfts from a collection, you typically need to use
-            cryptocurrency on a blockchain0based marketplace.
-          </p>
-        </li>
-        <li>
-          <img src={require(`../../img/FAQ-ape3.png`)} alt="Hero Ape" />
-          <span>[3]</span>
-          <h2>CAN I SELL OR TRADE NFTS FROM A COLLECTION?</h2>
-          <p>
-            To purchase nfts from a collection, you typically need to use
-            cryptocurrency on a blockchain0based marketplace.
-          </p>
-        </li>
-        <li>
-          <img src={require(`../../img/FAQ-ape4.png`)} alt="Hero Ape" />
-          <span>[4]</span>
-          <h2>WHAT RIGHTS DO I HAVE AS AN OWNER OF AN NFT?</h2>
-          <p>
-            To purchase nfts from a collection, you typically need to use
-            cryptocurrency on a blockchain0based marketplace.
-          </p>
-        </li>
-      </ul>
-    </FAQSection>
+    <Section>
+      <Heading>faq</Heading>
+      <FaqList>
+        {faqInfo.map(({ numbering, question, answer, picture }, index) => (
+          <FaqListItem
+            key={index}
+            $active={openIndex === index ? 'active' : 'not active'}
+          >
+            <FaqImg
+              src={picture}
+              alt="Monkey style"
+              $active={openIndex === index ? 'active' : 'not active'}
+              loading="lazy"
+            />
+            <FaqButton
+              type="button"
+              aria-label="Answer"
+              onClick={() => handleToggle(index)}
+              $active={openIndex === index ? 'active' : 'not active'}
+            >
+              {numbering}
+            </FaqButton>
+            <FaqQuestionWrapper>
+              <FaqQuestion onClick={() => handleToggle(index)}>
+                {question}
+              </FaqQuestion>
+              {openIndex === index && <FaqAnsver>{answer}</FaqAnsver>}
+            </FaqQuestionWrapper>
+          </FaqListItem>
+        ))}
+      </FaqList>
+    </Section>
   );
 };
 
