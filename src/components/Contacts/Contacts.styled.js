@@ -6,6 +6,10 @@ export const Section = styled.section`
   @media screen and (min-width: 768px) {
     padding-bottom: 80px;
   }
+
+  @media screen and (min-width: 1280px) {
+    padding-bottom: 120px;
+  }
 `;
 
 export const Wrapper = styled.div`

@@ -19,7 +19,7 @@ const Social = () => {
         </a>
       </li>
       <li>
-        <a href="/" uk-scroll="true">
+        <a href={'/'} uk-scroll="true">
           <svg>
             <use href="/public/svg/logo-hover.svg"></use>
           </svg>
