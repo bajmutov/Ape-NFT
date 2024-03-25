@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const AboutSection = styled.section`
   padding-bottom: 112px;
   padding-top: 60px;
-  /* margin: 0 auto; */
 
   @media screen and (min-width: 768px) {
     padding-bottom: 132px;
@@ -17,19 +16,12 @@ export const AboutSection = styled.section`
 `;
 
 export const AboutWrapper = styled.div`
-  /* width: 100%; */
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
   color: var(--main-font-color);
   position: relative;
-  /* padding: 0px 64px 0px; */
 
   @media screen and (min-width: 768px) {
-    /* padding: 0px 72px 0px; */
   }
   @media screen and (min-width: 1280px) {
-    /* padding: 0px 84px 0px 78px; */
   }
 `;
 
@@ -64,7 +56,6 @@ export const AboutTitle = styled.h2`
     min-width: 269px;
     margin-bottom: 0;
     flex-direction: column;
-    /* flex: 1; */
     font-size: 56px;
     line-height: 1;
 
@@ -110,10 +101,8 @@ export const AboutText = styled.p`
 `;
 
 export const DownWrapper = styled.div`
-  /* margin-top: 36px; */
   @media screen and (min-width: 768px) {
     display: flex;
-    /* position: relative; */
     gap: 10px;
   }
 `;

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { StyledLogoLink, LogoApe } from './Logo.styled';
+import { LogoApe } from './Logo.styled';
 
 const Logo = () => {
   return (
