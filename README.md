@@ -23,7 +23,7 @@
 3. The color of the question and numbers changes after openning and a background
    (and image on all screens except mobile) appears. When hovering or focusing,
    only the color changes.
-   <img width="980" alt="Apes" src="public/readmeImg/collection.png">
+   <img width="980" alt="Apes" src="public/readmeImg/faq.png">
 
 #Arts
 
