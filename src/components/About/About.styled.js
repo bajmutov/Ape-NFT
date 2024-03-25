@@ -41,7 +41,7 @@ export const TitleWrapper = styled.div`
 
 export const AboutTitle = styled.h2`
   font-family: var(--heading-font-family);
-  width: 221px;
+  /* width: 221px; */
   font-size: 40px;
   line-height: 1;
   text-align: left;
@@ -72,15 +72,19 @@ export const AboutTitle = styled.h2`
 `;
 
 export const AboutText = styled.p`
-  width: 216px;
+  /* width: 216px; */
   font-size: 16px;
   line-height: calc(19 / 16);
   text-align: right;
   text-transform: uppercase;
   margin-bottom: 36px;
-  text-indent: 136px;
+  text-indent: 0px;
   br {
     display: none;
+  }
+
+  @media screen and (min-width: 360px) {
+    text-indent: 136px;
   }
 
   @media screen and (min-width: 768px) {
@@ -92,6 +96,7 @@ export const AboutText = styled.p`
       display: block;
     }
   }
+
   @media screen and (min-width: 1280px) {
     width: 409px;
     font-size: 24px;
@@ -125,6 +130,9 @@ export const IconWrapper = styled.div`
     width: 15px;
     height: 15px;
   }
+  /* @media screen and (min-width: 360px) {
+    max-width: 480px;
+  } */
 
   @media screen and (min-width: 768px) {
     width: 269px;
