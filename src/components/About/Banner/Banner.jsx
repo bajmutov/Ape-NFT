@@ -24,7 +24,7 @@ const Banner = () => {
     return lineBanerArr;
   };
 
-  return <StyledBanContainer>{movingBanner(3)}</StyledBanContainer>;
+  return <StyledBanContainer>{movingBanner(4)}</StyledBanContainer>;
 };
 
 export default Banner;

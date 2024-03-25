@@ -17,10 +17,12 @@ const schema = yup.object().shape({
   discord: yup
     .string()
     .matches(/^@[\w]+$/, 'WRONG DISCORD')
+    .min(3, 'Must be exactly 3 digits')
     .required('DISCORD is required'),
   metamask: yup
     .string()
     .matches(/^[\w]+$/, 'WRONG ADRESS')
+    .min(20, 'Must be exactly 20 digits')
     .required('ADRESS is required'),
 });
 
@@ -81,7 +83,7 @@ const Form = () => {
               type="text"
               name="metamask"
               pattern="^[\w]+$"
-              minLength="10"
+              minLength="20"
               placeholder="WALLET ADRESS"
               disabled={isSubmitting}
               required

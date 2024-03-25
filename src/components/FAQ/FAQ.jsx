@@ -11,6 +11,7 @@ import {
   FaqQuestion,
   FaqQuestionWrapper,
 } from './FAQ.styled';
+import Container from 'components/Container';
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(0);
@@ -20,37 +21,39 @@ const FAQ = () => {
   };
 
   return (
-    <Section>
-      <Heading>faq</Heading>
-      <FaqList>
-        {faqInfo.map(({ numbering, question, answer, picture }, index) => (
-          <FaqListItem
-            key={index}
-            $active={openIndex === index ? 'active' : 'not active'}
-          >
-            <FaqImg
-              src={picture}
-              alt="Monkey style"
-              $active={openIndex === index ? 'active' : 'not active'}
-              loading="lazy"
-            />
-            <FaqButton
-              type="button"
-              aria-label="Answer"
-              onClick={() => handleToggle(index)}
+    <Section id="mindmap">
+      <Container>
+        <Heading>faq</Heading>
+        <FaqList>
+          {faqInfo.map(({ numbering, question, answer, picture }, index) => (
+            <FaqListItem
+              key={index}
               $active={openIndex === index ? 'active' : 'not active'}
             >
-              {numbering}
-            </FaqButton>
-            <FaqQuestionWrapper>
-              <FaqQuestion onClick={() => handleToggle(index)}>
-                {question}
-              </FaqQuestion>
-              {openIndex === index && <FaqAnsver>{answer}</FaqAnsver>}
-            </FaqQuestionWrapper>
-          </FaqListItem>
-        ))}
-      </FaqList>
+              <FaqImg
+                src={picture}
+                alt="Monkey style"
+                $active={openIndex === index ? 'active' : 'not active'}
+                loading="lazy"
+              />
+              <FaqButton
+                type="button"
+                aria-label="Answer"
+                onClick={() => handleToggle(index)}
+                $active={openIndex === index ? 'active' : 'not active'}
+              >
+                {numbering}
+              </FaqButton>
+              <FaqQuestionWrapper>
+                <FaqQuestion onClick={() => handleToggle(index)}>
+                  {question}
+                </FaqQuestion>
+                {openIndex === index && <FaqAnsver>{answer}</FaqAnsver>}
+              </FaqQuestionWrapper>
+            </FaqListItem>
+          ))}
+        </FaqList>
+      </Container>
     </Section>
   );
 };
