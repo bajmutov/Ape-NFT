@@ -84,6 +84,7 @@ const Form = () => {
               minLength="10"
               placeholder="WALLET ADRESS"
               disabled={isSubmitting}
+              required
             />
           </ContainerInput>
           <Error name="metamask" component="div" />
