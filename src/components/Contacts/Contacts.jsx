@@ -4,7 +4,7 @@ import { ReactComponent as Cross } from '../../img/cross.svg';
 
 const Contacts = () => {
   return (
-    <Section>
+    <Section id="mint">
       <Heading>ARE YOU IN?</Heading>
       <Wrapper>
         <SvgButton>

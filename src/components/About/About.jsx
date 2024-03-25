@@ -2,7 +2,6 @@ import ApeMobile from 'img/AboutApe-mobile.png';
 import ApeTable from 'img/AboutApe-tablet.png';
 import ApeDesk from 'img/AboutApe-desk.png';
 import { ReactComponent as Cross } from '../../img/cross.svg';
-import { Section } from 'components/Contacts/Contacts.styled';
 import Banner from './Banner';
 import {
   AboutImage,
@@ -17,7 +16,7 @@ import {
 
 const About = () => {
   return (
-    <AboutSection>
+    <AboutSection id="about">
       <AboutWrapper>
         <TitleWrapper>
           <AboutTitle>

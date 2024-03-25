@@ -5,7 +5,7 @@ import MindMapCards from './MindMapCards';
 
 const MindMap = () => {
   return (
-    <Section>
+    <Section id="mindmap">
       <Heading>Mind Map</Heading>
       <MindMapSlider />
       <MindMapCards />
