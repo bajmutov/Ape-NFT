@@ -1,5 +1,3 @@
-// import { StyledNav, StyledNavLink } from './Navigation.styled';
-
 const Navigation = () => {
   return (
     <ul>
