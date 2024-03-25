@@ -1,14 +1,30 @@
 import styled from 'styled-components';
 
 export const StyledHeader = styled.header`
-  padding: 20px 0px;
-  box-shadow: 0px 12px 34px -1px rgba(0, 0, 0, 0.2),
-    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
-  background: var(--grey-color);
+  width: 100%;
+
+  position: fixed;
+  z-index: 99;
+  top: 54px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media screen and (min-width: 1280px) {
+    top: 16px;
+  }
 `;
 
 export const StyledHeaderContainer = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: ${({ $scroll }) =>
+    $scroll === 'true' ? 'flex-end' : ' space-between'};
+  align-items: flex-start;
+  padding: 8px 16px 0;
+
+  @media screen and (min-width: 768px) {
+    padding: 12px 28px 0;
+  }
+  @media screen and (min-width: 1280px) {
+    padding: 24px 112px 0;
+  }
 `;

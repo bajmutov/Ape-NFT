@@ -1,11 +1,10 @@
-import { Link } from 'react-router-dom';
-import { LogoApe } from './Logo.styled';
+import { LogoApe, StyledLogoLink } from './Logo.styled';
 
 const Logo = () => {
   return (
-    <Link to="/">
+    <StyledLogoLink to="/">
       <LogoApe />
-    </Link>
+    </StyledLogoLink>
   );
 };
 

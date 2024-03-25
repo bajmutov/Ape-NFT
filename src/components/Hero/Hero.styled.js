@@ -1,38 +1,25 @@
 import styled from 'styled-components';
 
 export const HeroSection = styled.section`
-  /* position: relative; */
-  /* max-width: 1280px; */
-  /* width: 100%; */
-  /* min-height: 542px; */
-  /* margin: 0 auto; */
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
-  /* margin: 0 auto; */
   background-color: var(--accent-color);
   border-radius: 12px;
   padding: 36px 0px 19px;
 
   @media screen and (max-width: 480px) {
-    /* width: 100%; */
   }
 
   @media screen and (min-width: 768px) {
-    /* height: 736px; */
     padding: 124px 0px 35px;
   }
 
   @media screen and (min-width: 1280px) {
-    /* margin-top: 16px; */
-    /* height: 677px; */
     padding: 197px 0px 81px;
   }
 `;
 
 export const HeroContainer = styled.div`
   position: relative;
-  /* width: 100%; */
+
   padding: 0 72px;
   margin: 0 auto;
 
@@ -80,8 +67,7 @@ export const HeroTitle = styled.h1`
   line-height: calc(44 / 44);
   margin-bottom: 8px;
   text-align: center;
-  /* text-wrap: nowrap;
-  white-space: nowrap; */
+
   text-transform: uppercase;
 
   @media screen and (min-width: 768px) {
@@ -117,14 +103,14 @@ export const HeroPicture = styled.picture`
   @media screen and (min-width: 1280px) {
     left: 50%;
     transform: translateX(-55%);
-    /* left: 445px; */
+
     bottom: -81px;
   }
 `;
 
 export const HeroButton = styled.a`
   font-family: var(--heading-font-family);
-  /* width: 100%; */
+
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -147,7 +133,6 @@ export const HeroButton = styled.a`
   }
 
   @media screen and (min-width: 768px) {
-    /* width: 190px; */
     padding: 10px 61px 12px;
     margin-bottom: 0;
     color: var(--dark-text-color);
@@ -159,7 +144,6 @@ export const HeroButton = styled.a`
   }
 
   @media screen and (min-width: 1280px) {
-    /* width: 338px; */
     font-size: 28px;
     line-height: calc(34 / 28);
     padding: 16px 109.5px 20px;

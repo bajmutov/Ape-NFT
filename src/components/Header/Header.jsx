@@ -1,24 +1,28 @@
-// import Navigation from 'components/UI/Navigation';
-// import Logo from 'components/UI/Logo';
-
-import Button from 'components/Button';
 import Burger from './Burger';
 import { StyledHeader, StyledHeaderContainer } from './Header.styled';
 import Logo from './Logo';
-import Navigation from './Navigation';
-import Social from './Social';
+
+import { useEffect, useState } from 'react';
 
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollNavigate = window.scrollY;
+      setIsScrolled(scrollNavigate > 48);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <StyledHeader>
-      <StyledHeaderContainer>
-        <Burger />
-        <Logo />
-        <Navigation />
-        <Button pady={17} padx={3.5}>
-          CLOSE
-        </Button>
-        <Social />
+      <StyledHeaderContainer $scroll={isScrolled ? 'true' : 'false'}>
+        {!isScrolled && <Logo />}
+        <Burger isScrolled={isScrolled} />
       </StyledHeaderContainer>
     </StyledHeader>
   );

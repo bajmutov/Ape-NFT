@@ -1,7 +1,11 @@
 ## Ape NFT
 
-"Ape NFT" is the best platform for getting exclusive APEs!Don't lose your time!
-[Site on Github Page](https://bajmutov.github.io/Ape-NFT/).
+"Ape NFT" is the best platform for getting exclusive APEs! Don't lose your time!
+[Site on Github Page](https://bajmutov.github.io/Ape-NFT/). The project is
+adaptive and cross-browser - mobile from 360px to 480px (responsive layout),
+tablet - 768px, desktop - 1280px. Used the Mobile first approach. Thare are also
+used Prettier, custom fonts and React components (yup, formik, swiper etc.).
+Project was deployed on gh-pages.
 
 ## Features
 

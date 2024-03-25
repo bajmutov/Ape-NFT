@@ -130,9 +130,6 @@ export const IconWrapper = styled.div`
     width: 15px;
     height: 15px;
   }
-  /* @media screen and (min-width: 360px) {
-    max-width: 480px;
-  } */
 
   @media screen and (min-width: 768px) {
     width: 269px;
