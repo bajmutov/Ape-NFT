@@ -21,7 +21,7 @@ const FAQ = () => {
   };
 
   return (
-    <Section id="mindmap">
+    <Section id="faq">
       <Container>
         <Heading>faq</Heading>
         <FaqList>

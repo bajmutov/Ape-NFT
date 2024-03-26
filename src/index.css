@@ -33,6 +33,8 @@
   --main-bg-color: #181818;
   --secondary-background-color: #1e1e1e;
   --placeholder-color: rgba(255, 255, 255, 0.24);
+  --blur-color: rgba(255, 255, 255, 0.1);
+  --burger-color: rgba(30, 30, 30, 0.1);
 
   --light-text-color: #fff;
   --dark-text-color: #1e1e1e;
@@ -48,12 +50,29 @@
 
 html {
   scroll-behavior: smooth;
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  }
 }
 
 body {
   background-color: var(--main-bg-color);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, var(--text-font-family);
+}
+
+body::-webkit-scrollbar {
+  width: 18px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border-radius: 10px;
 }
 
 h1,

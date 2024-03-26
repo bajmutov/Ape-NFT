@@ -12,71 +12,66 @@ import {
 } from './Burger.styled';
 
 function BurgerMenu({ isScrolled }) {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isOpen, setIsMenuOpen] = useState(false);
 
   const handleMenuToggle = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen(!isOpen);
   };
 
   return (
     <NavMenu $scroll={isScrolled ? 'true' : 'false'}>
-      {!isScrolled && (
-        <BurgerList
-          $isOpen={isMenuOpen ? 'open' : 'close'}
-          // $scroll={isScrolled ? 'true' : 'false'}
-        >
-          <BurgerItem>
-            <a
-              href="#about"
-              aria-label="link scroll to the About section"
-              onClick={handleMenuToggle}
-            >
-              ABOUT
-            </a>
-          </BurgerItem>
-          <BurgerItem>
-            <a
-              href="#m-map"
-              aria-label="link scroll to the M-map section"
-              onClick={handleMenuToggle}
-            >
-              M-MAP
-            </a>
-          </BurgerItem>
-          <BurgerItem>
-            <a
-              href="#faq"
-              aria-label="link scroll to the FAQ section"
-              onClick={handleMenuToggle}
-            >
-              FAQ
-            </a>
-          </BurgerItem>
-          <BurgerItem>
-            <a
-              href="#arts"
-              aria-label="link scroll to the Arts section"
-              onClick={handleMenuToggle}
-            >
-              ARTS
-            </a>
-          </BurgerItem>
-          <BurgerItem>
-            <a
-              href="#mint"
-              aria-label="link scroll to the Mint section"
-              onClick={handleMenuToggle}
-            >
-              MINT
-            </a>
-          </BurgerItem>
-        </BurgerList>
-      )}
+      <BurgerList $isOpen={isOpen ? 'open' : 'close'}>
+        <BurgerItem>
+          <a
+            href="#about"
+            aria-label="link scroll to the About section"
+            onClick={handleMenuToggle}
+          >
+            ABOUT
+          </a>
+        </BurgerItem>
+        <BurgerItem>
+          <a
+            href="#mindmap"
+            aria-label="link scroll to the M-map section"
+            onClick={handleMenuToggle}
+          >
+            M-MAP
+          </a>
+        </BurgerItem>
+        <BurgerItem>
+          <a
+            href="#faq"
+            aria-label="link scroll to the FAQ section"
+            onClick={handleMenuToggle}
+          >
+            FAQ
+          </a>
+        </BurgerItem>
+        <BurgerItem>
+          <a
+            href="#arts"
+            aria-label="link scroll to the Arts section"
+            onClick={handleMenuToggle}
+          >
+            ARTS
+          </a>
+        </BurgerItem>
+        <BurgerItem>
+          <a
+            href="#mint"
+            aria-label="link scroll to the Mint section"
+            onClick={handleMenuToggle}
+          >
+            MINT
+          </a>
+        </BurgerItem>
+      </BurgerList>
 
-      <MenuList $isOpen={isMenuOpen ? 'open' : 'close'}>
+      <MenuList $isOpen={isOpen ? 'open' : 'close'}>
         <MenuItem>
           <MenuBtn type="button" onClick={handleMenuToggle}>
-            {isMenuOpen && !isScrolled ? 'CLOSE' : ' MENU'}
+            {isOpen ? 'CLOSE' : ' MENU'}
           </MenuBtn>
         </MenuItem>
         <MenuItem>
