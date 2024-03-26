@@ -13,6 +13,7 @@ function App() {
     <>
       <Header />
       <Main>
+        <Header />
         <Hero />
         <About />
         <MindMap />
