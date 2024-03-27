@@ -10,8 +10,9 @@ import {
   BurgerItem,
   BurgerList,
 } from './Burger.styled';
+import { MobileMenuBtn } from '../MobileMenu/MobileMenu.styled';
 
-function BurgerMenu({ isScrolled }) {
+function Burger({ isScrolled, handleModalOpen }) {
   const [isOpen, setIsMenuOpen] = useState(false);
 
   const handleMenuToggle = () => {
@@ -70,6 +71,13 @@ function BurgerMenu({ isScrolled }) {
 
       <MenuList $isOpen={isOpen ? 'open' : 'close'}>
         <MenuItem>
+          <MobileMenuBtn
+            type="button"
+            aria-label="button for opening menu"
+            onClick={handleModalOpen}
+          >
+            MENU
+          </MobileMenuBtn>
           <MenuBtn type="button" onClick={handleMenuToggle}>
             {isOpen ? 'CLOSE' : ' MENU'}
           </MenuBtn>
@@ -109,4 +117,4 @@ function BurgerMenu({ isScrolled }) {
   );
 }
 
-export default BurgerMenu;
+export default Burger;

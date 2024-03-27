@@ -68,20 +68,21 @@ export const FaqImg = styled.img`
     width: 248px;
     height: 282px;
     transform: rotate(-8deg);
+  }
 `;
 
 export const FaqButton = styled.button`
   height: 20px;
   background: transparent;
   margin-top: 4px;
-
+  text-wrap: nowrap;
   color: ${({ $active }) =>
     $active === 'active' ? 'var(--light-text-color)' : 'var(--accent-color)'};
 
   font-family: var(--cool-font-family);
   font-size: 12px;
   line-height: calc(20 / 12);
-  text-wrap: nowrap;
+
   border: none;
 
   @media screen and (min-width: 768px) {

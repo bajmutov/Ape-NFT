@@ -166,6 +166,9 @@ export const BurgerList = styled.ul`
 `;
 
 export const BurgerItem = styled.li`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   pointer-events: auto;
   width: 48px;
   height: 48px;
