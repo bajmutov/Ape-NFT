@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Section = styled.section`
+  pointer-events: auto;
   padding-bottom: 60px;
 
   @media screen and (min-width: 768px) {

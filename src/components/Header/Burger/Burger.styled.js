@@ -19,6 +19,7 @@ const fadeOut = keyframes`
 `;
 
 export const NavMenu = styled.nav`
+  pointer-events: none;
   display: flex;
   color: ${({ $scroll }) =>
     $scroll === 'true' ? 'var(--light-text-color)' : 'var(--dark-text-color)'};
@@ -80,6 +81,7 @@ export const MenuList = styled.ul`
 `;
 
 export const MenuItem = styled.li`
+  pointer-events: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -147,6 +149,7 @@ export const MenuBtn = styled.button`
 `;
 
 export const BurgerList = styled.ul`
+  pointer-events: none;
   display: none;
   @media screen and (min-width: 768px) {
     display: flex;

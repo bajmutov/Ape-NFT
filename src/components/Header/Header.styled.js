@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 export const StyledHeader = styled.header`
   width: 100%;
-
   position: fixed;
-  z-index: 99;
+  pointer-events: none;
+  z-index: 11;
   top: 54px;
   left: 50%;
   transform: translateX(-50%);

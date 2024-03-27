@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledContainer = styled.div`
+  pointer-events: auto;
   padding: 0 72px;
   margin: 0 auto;
 
