@@ -7,7 +7,8 @@ tablet - 768px, desktop - 1280px. Used the Mobile first approach. Thare are also
 used Prettier, custom fonts and React components (yup, formik, swiper etc.).
 Project was deployed on gh-pages.
 
-#Figma markup Document
+# Figma markup Document
+
 https://www.figma.com/file/NhwvCnRetLh4PsJY3rD2d6/Ape-NFT?type=design&node-id=45-3033&mode=design&t=9TnC1NEkjPbGv2Xi-0.
 
 ## Features
