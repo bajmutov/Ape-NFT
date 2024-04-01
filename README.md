@@ -16,7 +16,7 @@ https://www.figma.com/file/NhwvCnRetLh4PsJY3rD2d6/Ape-NFT?type=design&node-id=45
 #About
 
 1. Developed a story about Simple APE and Banner include a “moving line”
-   animation. <img width="980" alt="Apes" src="public/readmeImg/about.png">
+   animation. <img width="980" alt="Apes" src="/readmeImg/about.png">
 
 #MIND map
 
