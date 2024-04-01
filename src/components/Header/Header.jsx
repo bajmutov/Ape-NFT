@@ -13,7 +13,7 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollNavigate = window.scrollY;
-      setIsScrolled(scrollNavigate > 48);
+      setIsScrolled(scrollNavigate > 4);
     };
     window.addEventListener('scroll', handleScroll);
     return () => {

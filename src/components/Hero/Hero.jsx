@@ -31,17 +31,12 @@ const Hero = () => {
           ${ApeDesk} 1x
    
         `}
-              width="463"
-              height="612"
             />
             <source
               media="(min-width: 768px)"
               srcSet={`
           ${ApeTablet} 1x
-        
-        `}
-              width="283"
-              height="386"
+                `}
             />
             <source
               media="(max-width: 767px)"
@@ -49,7 +44,7 @@ const Hero = () => {
           ${ApeMobile} 1x
           `}
             />
-            <img src={ApeDesk} alt="Cool Ape" />
+            <img src={ApeDesk} alt="Cool Ape" width="463" height="612" />
           </HeroPicture>
           <DeckWrapper>
             <HeroButton href="#mint">MEET APES</HeroButton>

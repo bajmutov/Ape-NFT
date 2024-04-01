@@ -41,7 +41,6 @@ export const TitleWrapper = styled.div`
 
 export const AboutTitle = styled.h2`
   font-family: var(--heading-font-family);
-  /* width: 221px; */
   font-size: 40px;
   line-height: 1;
   text-align: left;
@@ -72,8 +71,8 @@ export const AboutTitle = styled.h2`
 `;
 
 export const AboutText = styled.p`
-  /* width: 216px; */
   font-size: 16px;
+  font-weight: 400;
   line-height: calc(19 / 16);
   text-align: right;
   text-transform: uppercase;

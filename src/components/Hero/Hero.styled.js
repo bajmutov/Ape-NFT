@@ -92,6 +92,8 @@ export const HeroPicture = styled.picture`
   }
 
   @media screen and (min-width: 768px) {
+    width: 283px;
+    height: 386px;
     margin-top: 0px;
     margin-bottom: 0px;
     position: absolute;
@@ -101,6 +103,8 @@ export const HeroPicture = styled.picture`
   }
 
   @media screen and (min-width: 1280px) {
+    width: 463px;
+    height: 612px;
     left: 50%;
     transform: translateX(-55%);
 

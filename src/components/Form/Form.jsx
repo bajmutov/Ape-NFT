@@ -1,6 +1,9 @@
 import { Formik } from 'formik';
-import toast, { Toaster } from 'react-hot-toast';
 import * as yup from 'yup';
+import { useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
+import { ReactComponent as Discord } from '../../img/discord.svg';
+import { ReactComponent as Metamask } from '../../img/MetaMask.svg';
 import {
   ContainerInput,
   Error,
@@ -9,17 +12,14 @@ import {
   Input,
   SubmitButton,
 } from './Form.styled';
-import { ReactComponent as Discord } from '../../img/discord.svg';
-import { ReactComponent as Metamask } from '../../img/MetaMask.svg';
-import { useState } from 'react';
 
 const schema = yup.object().shape({
-  discord: yup
+  username: yup
     .string()
     .matches(/^@[\w]+$/, 'WRONG DISCORD')
     .min(3, 'Must be exactly 3 digits')
     .required('DISCORD is required'),
-  metamask: yup
+  walletaddress: yup
     .string()
     .matches(/^[\w]+$/, 'WRONG ADRESS')
     .min(20, 'Must be exactly 20 digits')
@@ -27,19 +27,43 @@ const schema = yup.object().shape({
 });
 
 const initialValues = {
-  discord: '',
-  metamask: '',
+  username: '',
+  walletaddress: '',
 };
 
 const Form = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [buttonText, setButtonText] = useState('mint');
 
-  const handleSubmit = (values, { resetForm }) => {
+  const [username, setUsername] = useState(
+    () => JSON.parse(window.localStorage.getItem('username')) || ''
+  );
+  const [walletaddress, setWalletaddress] = useState(
+    () => JSON.parse(window.localStorage.getItem('walletaddress')) ?? ''
+  );
+
+  const handleChange = event => {
+    const { name, value } = event.target;
+    switch (name) {
+      case 'username':
+        setUsername(value);
+        break;
+      case 'walletaddress':
+        setWalletaddress(value);
+        break;
+      default:
+        return;
+    }
+  };
+
+  const handleSubmit = ({ username, walletaddress }, { resetForm }) => {
     try {
+      localStorage.setItem('username', JSON.stringify(username));
+      localStorage.setItem('walletaddress', JSON.stringify(walletaddress));
+
       setIsSubmitting(true);
       setButtonText('minted');
-      toast.success(`Thank you, ${values.discord} submitted successfully!`);
+      toast.success(`Thank you, ${username} submitted successfully!`);
       setIsSubmitting(false);
     } catch (error) {
       setIsSubmitting(false);
@@ -60,37 +84,38 @@ const Form = () => {
         validationSchema={schema}
         onSubmit={handleSubmit}
       >
-        <Forma autoComplete="off">
+        <Forma>
           <ContainerInput>
             <IconButton>
               <Discord fill={'#5a65f2'} width={24} height={24} />
             </IconButton>
             <Input
               type="text"
-              name="discord"
-              pattern="^@[\w]+$"
-              minLength="3"
+              name="username"
               placeholder="@USERNAME"
-              required
+              value={username}
+              onChange={handleChange}
+              disabled={isSubmitting}
             />
           </ContainerInput>
-          <Error name="discord" component="div" />
+          <Error name="username" component="div" />
           <ContainerInput>
             <IconButton>
               <Metamask width={24} height={24} />
             </IconButton>
             <Input
               type="text"
-              name="metamask"
-              pattern="^[\w]+$"
-              minLength="20"
+              name="walletaddress"
               placeholder="WALLET ADRESS"
               disabled={isSubmitting}
-              required
+              value={walletaddress}
+              onChange={handleChange}
             />
           </ContainerInput>
-          <Error name="metamask" component="div" />
-          <SubmitButton type="submit">{buttonText}</SubmitButton>
+          <Error name="walletaddress" component="div" />
+          <SubmitButton type="submit" aria-label="Send form">
+            {buttonText}
+          </SubmitButton>
         </Forma>
       </Formik>
       <Toaster theme="dark" />
