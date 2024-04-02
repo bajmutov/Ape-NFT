@@ -105,4 +105,10 @@ export const SubmitButton = styled.button`
   &:focus {
     color: var(--dark-text-col);
   }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 28px;
+    line-height: calc(34 / 28);
+    height: 70px;
+  }
 `;
