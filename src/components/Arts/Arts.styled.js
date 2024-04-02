@@ -41,3 +41,18 @@ export const PaginationButton = styled.button`
     margin-top: 48px;
   }
 `;
+
+export const StyledImg = styled.img`
+  width: 216px;
+  height: 256px;
+
+  @media screen and (min-width: 768px) {
+    width: 284px;
+    height: 336px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 240px;
+    height: 280px;
+  }
+`;

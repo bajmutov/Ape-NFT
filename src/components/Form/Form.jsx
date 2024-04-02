@@ -1,6 +1,6 @@
 import { Formik } from 'formik';
 import * as yup from 'yup';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import { ReactComponent as Discord } from '../../img/discord.svg';
 import { ReactComponent as Metamask } from '../../img/MetaMask.svg';
@@ -42,20 +42,6 @@ const Form = () => {
     () => JSON.parse(window.localStorage.getItem('walletaddress')) ?? ''
   );
 
-  const handleChange = event => {
-    const { name, value } = event.target;
-    switch (name) {
-      case 'username':
-        setUsername(value);
-        break;
-      case 'walletaddress':
-        setWalletaddress(value);
-        break;
-      default:
-        return;
-    }
-  };
-
   const handleSubmit = ({ username, walletaddress }, { resetForm }) => {
     try {
       localStorage.setItem('username', JSON.stringify(username));
@@ -84,39 +70,42 @@ const Form = () => {
         validationSchema={schema}
         onSubmit={handleSubmit}
       >
-        <Forma>
-          <ContainerInput>
-            <IconButton>
-              <Discord fill={'#5a65f2'} width={24} height={24} />
-            </IconButton>
-            <Input
-              type="text"
-              name="username"
-              placeholder="@USERNAME"
-              value={username}
-              onChange={handleChange}
-              disabled={isSubmitting}
-            />
-          </ContainerInput>
-          <Error name="username" component="div" />
-          <ContainerInput>
-            <IconButton>
-              <Metamask width={24} height={24} />
-            </IconButton>
-            <Input
-              type="text"
-              name="walletaddress"
-              placeholder="WALLET ADRESS"
-              disabled={isSubmitting}
-              value={walletaddress}
-              onChange={handleChange}
-            />
-          </ContainerInput>
-          <Error name="walletaddress" component="div" />
-          <SubmitButton type="submit" aria-label="Send form">
-            {buttonText}
-          </SubmitButton>
-        </Forma>
+        {props => {
+          console.log('props :>> ', props);
+          return (
+            <Forma onSubmit={props.handleSubmit}>
+              <ContainerInput>
+                <IconButton>
+                  <Discord fill={'#5a65f2'} width={24} height={24} />
+                </IconButton>
+                <Input
+                  type="text"
+                  name="username"
+                  placeholder="@USERNAME"
+                  value={props.values.username}
+                  disabled={isSubmitting}
+                />
+              </ContainerInput>
+              <Error name="username" component="div" />
+              <ContainerInput>
+                <IconButton>
+                  <Metamask width={24} height={24} />
+                </IconButton>
+                <Input
+                  type="text"
+                  name="walletaddress"
+                  placeholder="WALLET ADRESS"
+                  disabled={isSubmitting}
+                  value={props.values.walletaddress}
+                />
+              </ContainerInput>
+              <Error name="walletaddress" component="div" />
+              <SubmitButton type="submit" aria-label="Send form">
+                {buttonText}
+              </SubmitButton>
+            </Forma>
+          );
+        }}
       </Formik>
       <Toaster theme="dark" />
     </>

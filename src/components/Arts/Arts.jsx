@@ -1,4 +1,4 @@
-import { Section } from './Arts.styled';
+import { Section, StyledImg } from './Arts.styled';
 import 'swiper/css';
 import { useMediaQuery } from 'react-responsive';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -25,7 +25,7 @@ const Arts = () => {
         <Swiper spaceBetween={24} slidesPerView={slidesNumber}>
           {slides.map(slide => (
             <SwiperSlide key={slide.image}>
-              <img
+              <StyledImg
                 src={require(`../../img/${slide.image}`)}
                 alt={slide.title}
               />
