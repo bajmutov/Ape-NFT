@@ -71,7 +71,6 @@ const Form = () => {
         onSubmit={handleSubmit}
       >
         {props => {
-          console.log('props :>> ', props);
           return (
             <Forma onSubmit={props.handleSubmit}>
               <ContainerInput>
